@@ -20,7 +20,7 @@
 
 <body style="background: -webkit-linear-gradient(left, #cc8658, #d3988e);">
     <h1 style="text-align: center;">Offline Customer Information</h1>
-    <form action="cust_info.php" method="post" style="margin-left: 50px; margin-right: 50px;">
+    <form action="cust_info.php" method="post" style="margin-left: 25.5em; margin-right: 25.5em;">
     <div class="form-group" >
         <label for="name">Name:</label>
         <input type="name" class="form-control" id="name" placeholder="Enter name" name="name">
@@ -55,6 +55,7 @@
 
 
 <?php
+
 // This function will run within each post array including multi-dimensional arrays
 function ExtendedAddslash(&$params)
 {
@@ -92,4 +93,6 @@ $resultcount = mysqli_num_rows($sqlsearch);
     mysqli_query($con,"INSERT INTO `customer_record` (name, email, phonenumber, date, amount)
 VALUES ('$name', '$email', '$phonenumber', '$date', '$amount') ")
         or die(mysqli_error($con));
+
+
 ?>
