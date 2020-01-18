@@ -1,4 +1,4 @@
-<?php print_r($_POST);   ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,40 +18,44 @@
     <title>Offline Customer Information</title>
 </head>
 
-<body>
+<body style="background: -webkit-linear-gradient(left, #cc8658, #d3988e);">
     <h1 style="text-align: center;">Offline Customer Information</h1>
-    <form method="post" style="margin-left: 50px; margin-right: 50px;">
-        <div class="form-group">
-            <label for="name">name:</label>
-            <input type="name" class="form-control" id="name" placeholder="Enter name" name="name">
-        </div>
-        <div class="form-group">
-            <label for="number">Mobile Number:</label>
-            <input type="text" class="form-control" id="phonenumber" placeholder="Enter Phone Number" name="phonenumber">
-        </div>
-        <div class="form-group">
-            <label for="email">E-mail:</label>
-            <input type="text" class="form-control" id="email" placeholder="Enter e-mail" name="email">
-        </div>
-        <div class="form-group">
-            <label for="date">Date:</label>
-            <input type="date" class="form-control" id="date" placeholder="Enter date" name="date">
-        </div>
+    <form action="cust_info.php" method="post" style="margin-left: 50px; margin-right: 50px;">
+    <div class="form-group" >
+        <label for="name">Name:</label>
+        <input type="name" class="form-control" id="name" placeholder="Enter name" name="name">
+    </div>
+    <div class="form-group">
+        <label for="number">Mobile Number:</label>
+        <input type="text" class="form-control" id="phonenumber" required placeholder="Enter Phone Number" name="phonenumber">
+    </div>
+    <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input type="email" required class="form-control" id="email" placeholder="Enter e-mail" name="email">
+    </div>
+    <div class="form-group">
+        <label for="date">Date:</label>
+        <input type="date" class="form-control" id="date" placeholder="Enter date" name="date">
+    </div>
 
-        <div class="form-group">
+    <div class="form-group">
             <label for="amount">Amount:</label>
             <input type="text" class="form-control" id="amount" placeholder="Enter amount" name="amount">
-        </div>
+          </div>
 
-        <button type="submit" class="btn btn-default">Submit</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
     </form>
     </div>
+
+    
 </body>
 
 </html>
 
-// This function will run within each post array including multi-dimensional arrays
+
+
 <?php
+// This function will run within each post array including multi-dimensional arrays
 function ExtendedAddslash(&$params)
 {
     foreach ($params as &$var) {
