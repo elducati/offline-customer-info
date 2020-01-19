@@ -19,7 +19,10 @@
 </head>
 
 <body style="background: -webkit-linear-gradient(left, #cc8658, #d3988e);">
-    <h1 style="text-align: center;">Offline Customer Information</h1>
+    <div>
+        <img src="logo.gif" alt="logo" width="130px" height="39" style="margin-left: 25.5em; margin-right: 25.5em;">
+     <h1 style="text-align: center;">Offline Customer Information</h1>
+    </div>
     <form action="cust_info.php" method="post" style="margin-left: 25.5em; margin-right: 25.5em;">
     <div class="form-group" >
         <label for="name">Name:</label>
