@@ -13,18 +13,18 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <title>Offline Customer Information</title>
 </head>
 
 <body>
     <div>
-        <img src="logo.gif" alt="logo" width="130px" height="39">
+        <img src="images/logo.gif" alt="logo" width="130px" height="39">
         <h1>Offline Customer Information</h1>
     </div>
     <div>
-    <form action="cust_info.php" method="post">
+    <form id="form" action="cust_info.php" method="post">
         <div class="form-group">
             <label for="name">Name:</label>
             <input type="name" class="form-control" id="name" placeholder="Enter name" name="name">
@@ -54,6 +54,7 @@
 
 
 </body>
+
 
 </html>
 
@@ -91,7 +92,7 @@ $con = mysqli_connect($db_host, $db_username, $db_password, $db_name);
 
 // search email ID
 /** */
-$query = "SELECT * FROM `customer_record` WHERE `email` = '$email'";
+$query = "SELECT count(*) as allcount FROM `customer_record` WHERE `email` = '.$email.'";
 $sqlsearch = mysqli_query($con, $query);
 $resultcount = mysqli_num_rows($sqlsearch);
 
