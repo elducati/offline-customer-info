@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,43 +13,46 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 
     <title>Offline Customer Information</title>
 </head>
 
-<body style="background: -webkit-linear-gradient(left, #cc8658, #d3988e);">
+<body>
     <div>
-        <img src="logo.gif" alt="logo" width="130px" height="39" style="margin-left: 25.5em; margin-right: 25.5em;">
-     <h1 style="text-align: center;">Offline Customer Information</h1>
+        <img src="logo.gif" alt="logo" width="130px" height="39">
+        <h1>Offline Customer Information</h1>
     </div>
-    <form action="cust_info.php" method="post" style="margin-left: 25.5em; margin-right: 25.5em;">
-    <div class="form-group" >
-        <label for="name">Name:</label>
-        <input type="name" class="form-control" id="name" placeholder="Enter name" name="name">
-    </div>
-    <div class="form-group">
-        <label for="number">Mobile Number:</label>
-        <input type="text" class="form-control" id="phonenumber" required placeholder="Enter Phone Number" name="phonenumber">
-    </div>
-    <div class="form-group">
-        <label for="email">E-mail:</label>
-        <input type="email" required class="form-control" id="email" placeholder="Enter e-mail" name="email">
-    </div>
-    <div class="form-group">
-        <label for="date">Date:</label>
-        <input type="date" class="form-control" id="date" placeholder="Enter date" name="date">
-    </div>
+    <div>
+    <form action="cust_info.php" method="post">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="name" class="form-control" id="name" placeholder="Enter name" name="name">
+        </div>
+        <div class="form-group">
+            <label for="number">Mobile Number:</label>
+            <input type="text" class="form-control" id="phonenumber" required placeholder="Enter Phone Number" name="phonenumber">
+        </div>
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" required class="form-control" id="email" placeholder="Enter e-mail" name="email">
+        </div>
+        <div class="form-group">
+            <label for="date">Date:</label>
+            <input type="date" class="form-control" id="date" placeholder="Enter date" name="date">            
+        </div>
 
-    <div class="form-group">
+        <div class="form-group">
             <label for="amount">Amount:</label>
             <input type="text" class="form-control" id="amount" placeholder="Enter amount" name="amount">
-          </div>
 
-    <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
     </div>
 
-    
+
 </body>
 
 </html>
@@ -93,9 +95,9 @@ $query = "SELECT * FROM `customer_record` WHERE `email` = '$email'";
 $sqlsearch = mysqli_query($con, $query);
 $resultcount = mysqli_num_rows($sqlsearch);
 
-    mysqli_query($con,"INSERT INTO `customer_record` (name, email, phonenumber, date, amount)
+mysqli_query($con, "INSERT INTO `customer_record` (name, email, phonenumber, date, amount)
 VALUES ('$name', '$email', '$phonenumber', '$date', '$amount') ")
-        or die(mysqli_error($con));
+    or die(mysqli_error($con));
 
 
 ?>

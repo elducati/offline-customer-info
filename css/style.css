@@ -1,0 +1,11 @@
+body{
+    height: 100%;
+    /* add Flexbox code here! */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+    background: -webkit-linear-gradient(left, #cc8658, #f8f6f5);
+    box-sizing: border-box;
+}
