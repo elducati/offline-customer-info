@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 19, 2020 at 08:56 PM
+-- Generation Time: Jan 22, 2020 at 01:38 PM
 -- Server version: 10.4.11-MariaDB
--- PHP Version: 7.2.26
+-- PHP Version: 7.3.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -42,9 +42,12 @@ CREATE TABLE `customer_record` (
 --
 
 INSERT INTO `customer_record` (`id`, `name`, `email`, `phonenumber`, `date`, `amount`) VALUES
-(1, '', '', 0, '0000-00-00', ''),
-(2, '', 'geomondi09@gmail.com', 710670576, '0000-00-00', ''),
-(8, 'Jeff', 'recalcitrant91.geoffrey@gmail.com', 710670577, '2020-01-19', '1000');
+(48, 'jay', 'geomondi09@gmail.com', 738034004, '0000-00-00', ''),
+(49, 'rick', 'geomondi09@outlook.com', 738034004, '0000-00-00', ''),
+(50, 'rick', 'geomondi09@outlook.com', 738034004, '0000-00-00', ''),
+(51, 'rick', 'geomondi09@outlook.com', 738034004, '0000-00-00', ''),
+(52, 'jay', 'geomondi09@outlook.com', 738034004, '0000-00-00', ''),
+(53, 'Marstella Kisanga', 'geomondi09@gmail.com', 738034004, '0000-00-00', '');
 
 --
 -- Indexes for dumped tables
@@ -54,9 +57,7 @@ INSERT INTO `customer_record` (`id`, `name`, `email`, `phonenumber`, `date`, `am
 -- Indexes for table `customer_record`
 --
 ALTER TABLE `customer_record`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `email` (`email`),
-  ADD UNIQUE KEY `phonenumber` (`phonenumber`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -66,7 +67,7 @@ ALTER TABLE `customer_record`
 -- AUTO_INCREMENT for table `customer_record`
 --
 ALTER TABLE `customer_record`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
